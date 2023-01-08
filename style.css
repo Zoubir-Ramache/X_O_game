@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(35deg, #71f7cf, #4b99f3, #939df8);
+  overflow: hidden; }
+
+.buttons {
+  border: 2px solid #bda3ec;
+  margin: 2%;
+  box-shadow: 0 2px 3px black , inset 0 .1px .1px black;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(130, 248, 159, 0.726);
+  font-size: 60px; }
+
+/*# sourceMappingURL=style.css.map */
