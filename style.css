@@ -5,11 +5,17 @@
 
 body {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: linear-gradient(35deg, #71f7cf, #4b99f3, #939df8);
   overflow: hidden; }
+
+header {
+  display: flex;
+  justify-content: center; }
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .buttons {
   border: 2px solid #bda3ec;
