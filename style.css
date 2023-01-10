@@ -10,7 +10,8 @@ body {
 
 header {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  font-family: "JetBrains Mono",monospace; }
 
 main {
   display: flex;
@@ -28,5 +29,10 @@ main {
   justify-content: center;
   background: rgba(130, 248, 159, 0.726);
   font-size: 60px; }
+
+.winner {
+  margin: 2%;
+  text-shadow: 2px 1px 10px #fce046;
+  color: #3b055a; }
 
 /*# sourceMappingURL=style.css.map */

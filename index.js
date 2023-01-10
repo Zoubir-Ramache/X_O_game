@@ -40,8 +40,16 @@ function check_winner() {
         const btn2 = document.getElementById(`btn${OP[1]}`)        
         const btn3 = document.getElementById(`btn${OP[2]}`) 
         if(btn1.textContent==X || btn1.textContent==O)
-        if(btn1.textContent==btn2.textContent && btn1.textContent==btn3.textContent)  
-        console.log(" the winner is ");    
+        if(btn1.textContent==btn2.textContent && btn1.textContent==btn3.textContent){
+            
+            document.querySelector('h1').textContent=`the winner is ${btn1.textContent} `
+            document.querySelector('h1').classList.add('winner')
+
+            buttons.forEach(btn=>{
+                btn.removeAttribute('onclick')
+            })
+        }
+        
     })
 }
 
