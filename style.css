@@ -6,33 +6,49 @@
 body {
   min-height: 100vh;
   background: linear-gradient(35deg, #71f7cf, #4b99f3, #939df8);
-  overflow: hidden; }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
 
 header {
   display: flex;
-  justify-content: center;
-  font-family: "JetBrains Mono",monospace; }
+  justify-content: center; }
 
 main {
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  overflow: hidden; }
+
+div {
+  margin: 4px; }
 
 .buttons {
-  border: 2px solid #bda3ec;
-  margin: 2%;
+  border: 2px solid #a272fa;
+  margin: 4%;
   box-shadow: 0 2px 3px black , inset 0 .1px .1px black;
+  z-index: 2;
   width: 100px;
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(130, 248, 159, 0.726);
+  background: #82f89f;
   font-size: 60px; }
 
+.buttons:hover {
+  box-shadow: 0px 0px 5px #f0ebeb; }
+
 .winner {
-  margin: 2%;
-  text-shadow: 2px 1px 10px #fce046;
-  color: #3b055a; }
+  color: #021746; }
+
+#repeat {
+  font-size: 20px;
+  background: #0f91fc;
+  border-radius: 20%;
+  padding: 10px;
+  display: block;
+  box-shadow: 0 1px 2px #fdfafa; }
 
 /*# sourceMappingURL=style.css.map */

@@ -10,10 +10,10 @@ function clicked (val){
 
     if(i%2==0){
     btnc.textContent=X
-    turn.textContent=` ${O} `
+    turn.textContent=`${O} `
     }else{
     btnc.textContent=O
-    turn.textContent=` ${X} `
+    turn.textContent=`${X} `
     }
     check_winner()
     i++
@@ -42,7 +42,8 @@ function check_winner() {
         if(btn1.textContent==X || btn1.textContent==O)
         if(btn1.textContent==btn2.textContent && btn1.textContent==btn3.textContent){
             
-            document.querySelector('h1').textContent=`the winner is ${btn1.textContent} `
+            document.querySelector('h1').textContent=`the winner is : ${btn1.textContent} `
+            alert(`the winner is : ${btn1.textContent} `)
             document.querySelector('h1').classList.add('winner')
 
             buttons.forEach(btn=>{
@@ -51,5 +52,8 @@ function check_winner() {
         }
         
     })
+}
+const repeat=()=>{
+    location.reload()
 }
 
