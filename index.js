@@ -1,4 +1,7 @@
 const buttons = document.querySelectorAll('.buttons')
+document.getElementById('contO').textContent=`${localStorage.getItem('contO')}`
+document.getElementById('contX').textContent=0 &&`${localStorage.getItem('contX')}`
+
 const X = 'X' , O='O'
 var i=1;
 function clicked (val){
@@ -42,6 +45,14 @@ function check_winner() {
         if(btn1.textContent==X || btn1.textContent==O)
         if(btn1.textContent==btn2.textContent && btn1.textContent==btn3.textContent){
             
+
+            btn1.style="background:#fee00f;"
+            btn2.style="background:#fee00f;"
+            btn3.style="background:#fee00f;"
+
+            const cont = localStorage.getItem(`cont${btn1.textContent}`)
+            localStorage.setItem(`cont${btn1.textContent}` , `${  1 +Number( cont)}`)
+            document.getElementById(`cont${btn1.textContent}`).textContent=`${localStorage.getItem(`cont${btn1.textContent}`)}`
             document.querySelector('h1').textContent=`the winner is : ${btn1.textContent} `
             alert(`the winner is : ${btn1.textContent} `)
             document.querySelector('h1').classList.add('winner')
@@ -52,6 +63,8 @@ function check_winner() {
         }
         
     })
+
+
 }
 const repeat=()=>{
     location.reload()
