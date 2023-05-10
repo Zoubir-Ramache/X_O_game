@@ -37,7 +37,7 @@ const WIN_OP=[
 ]
 function check_winner() {
     
-    WIN_OP.forEach((OP)=> {
+    WIN_OP.forEach((OP , i)=> {
 
         const btn1 = document.getElementById(`btn${OP[0]}`)            
         const btn2 = document.getElementById(`btn${OP[1]}`)        
@@ -46,15 +46,21 @@ function check_winner() {
         if(btn1.textContent==btn2.textContent && btn1.textContent==btn3.textContent){
             
 
-            btn1.style="background:#fee00f;"
-            btn2.style="background:#fee00f;"
-            btn3.style="background:#fee00f;"
+            // btn1.style="background:#fee00f;"
+            // btn2.style="background:#fee00f;"
+            // btn3.style="background:#fee00f;"
+            // !
+            const line = document.getElementsByClassName('line')[0]
 
+            line.classList.add(`line${i+1}`)
+
+
+            // !
             const cont = localStorage.getItem(`cont${btn1.textContent}`)
             localStorage.setItem(`cont${btn1.textContent}` , `${  1 +Number( cont)}`)
             document.getElementById(`cont${btn1.textContent}`).textContent=`${localStorage.getItem(`cont${btn1.textContent}`)}`
             document.querySelector('h1').textContent=`the winner is : ${btn1.textContent} `
-            alert(`the winner is : ${btn1.textContent} `)
+            // alert(`the winner is : ${btn1.textContent} `)
             document.querySelector('h1').classList.add('winner')
 
             buttons.forEach(btn=>{

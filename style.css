@@ -57,4 +57,75 @@ div {
   font-size: xx-large;
 }
 
+
+
+.line{
+  width: 400px;
+  background: #ff22ff;
+  border-radius: 10%;
+  height: 10px;
+  position: absolute;
+  display: none;
+  animation: rotatedline 1s ;
+}
+.line1{
+  transform: rotate(90deg) translateY(100px);
+  width: 310px;
+  display: block;
+}
+.line2{
+  display: block;
+  width: 310px;
+  transform: rotate(90deg);
+}
+.line3{
+  display: block;
+  width: 310px;
+  transform: rotate(90deg) translateY(-110px);
+}
+.line4{
+  display: block;
+  transform: translateY(-100px);
+  width: 310px;
+
+}
+.line5{
+  width: 310px;
+  display: block;
+}
+.line6{
+  width: 310px;
+  display: block;
+  transform: translateY(105px);
+  
+}
+.line7{
+  display: block;
+  transform: rotate(45deg);
+}
+.line8{
+  display: block;
+  transform: rotate(-45deg);
+}
+
+
+@keyframes rotatedline {
+  0%{
+    width: 0%;
+  }
+  90% {
+    width: 310px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 /*# sourceMappingURL=style.css.map */
